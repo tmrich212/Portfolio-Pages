@@ -37,3 +37,18 @@ function playAnim() {
 
 //start animation
 playAnim();
+
+const formatDate = (date = new Date()) => {
+const day = date.getDate() + 1;
+const month = date.getMonth() + 1;
+const year = date.getFullYear();
+
+return `${month}/${day}/${year}`;
+}
+
+console.log(formatDate());
+
+$('.nav-item').on('mouseenter', event =>{
+  $(event.currentTarget).slideDown('.nav-link');
+})
+
